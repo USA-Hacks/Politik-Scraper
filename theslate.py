@@ -9,7 +9,7 @@ from outputwriter import OutputWriter
 
 url_template = u'http://www.slate.com/full_slate%s.html'
 website_name = 'http://www.slate.com/'
-num_pages = 0
+num_pages = 100
 
 article_urls = []
 
