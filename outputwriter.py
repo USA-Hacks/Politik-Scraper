@@ -1,6 +1,8 @@
 from datetime import datetime
 from json import dumps as _
 
+political_keywords = ['iran', 'obama', 'campaign', 'resolution', 'trump', 'republicans', 'democrats', 'bernie', 'election', 'voting', 'polls', 'hillary', 'bush', 'war', 'economy', 'abortion', 'gun', 'rights', 'conservative', 'liberal', 'liberty', 'privacy', 'cruz', 'santorum', 'biden', 'rubio', 'perry', 'israel']
+
 class OutputWriter():
 
         def get_pio_time(self):
