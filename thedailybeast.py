@@ -10,7 +10,7 @@ from outputwriter import OutputWriter, political_keywords
 url_template = u'http://www.thedailybeast.com/topics/politics.%s.html'
 website_name = '/articles'
 host_url = 'http://www.thedailybeast.com'
-num_pages = 100
+num_pages = 300
 
 article_urls = []
 entity_id = 1476
