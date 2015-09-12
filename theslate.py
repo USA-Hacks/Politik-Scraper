@@ -5,6 +5,8 @@ from bs4 import BeautifulSoup
 import requests
 import logging
 
+from outputwriter import OutputWriter
+
 url_template = u'http://www.slate.com/full_slate%s.html'
 website_name = 'http://www.slate.com/'
 num_pages = 0
@@ -33,10 +35,14 @@ for page in range(num_pages + 1):
 		if website_name in href and 'full_slate' not in href:
 			article_urls.append(href)
 
+out = OutputWriter()
 for article_url in article_urls:
 	article = Article(article_url)
 	article.download()
 	article.parse()
 	article.nlp()
 	if len([i for i in political_keywords if i in article.keywords]) > 0:
-		print article.text
+		out.output('Democrat', article.text, entity_id, 3)
+		entity_id += 1
+
+out.close()
